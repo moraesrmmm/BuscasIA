@@ -19,6 +19,6 @@ def fibonacci_recursivo(n):
     
     return fibonacci_recursivo(n - 1) + fibonacci_recursivo(n - 2)
 
-for n in range(1000):
+for n in range(10):
     print(fibonacci_recursivo(n), end=" ")
 

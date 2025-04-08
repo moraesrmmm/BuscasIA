@@ -8,7 +8,7 @@ def merge_sort(elements: list) -> list:
     Função recebe lista não ordenada, então 
     utilizando o conceito de divisão e conquista, fará a divisão da lista 
     em sublistas até que reste somente 1 elemento. Em paralelo invoca a func
-    merge para fazer a mesclagem ja ordenando os elementos. 
+    merge p fazer a mesclagem ja ordenando os elementos. 
     """
 
     #TODO: Caso base: Se o tamanho da lista for 1
@@ -29,9 +29,6 @@ def merge_sort(elements: list) -> list:
 
 
 def merge(first: list, second: list):
-    """
-    Juntar os elementos de forma ordenada em uma lista 
-    """
     index1 = index2 = 0
     elements = []
 
@@ -44,11 +41,11 @@ def merge(first: list, second: list):
             index2 += 1
 
     while index1 < len(first):
-        elements.append(first(index1))
+        elements.append(first[index1])
         index1 += 1
 
     while index2 < len(second):
-        elements.append(second(index2))
+        elements.append(second[index2])
         index2 += 1
 
     return elements

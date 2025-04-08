@@ -5,8 +5,9 @@ de um mapa de cidades da Romênia.
 """
 
 class Vertice:
-    def __init__(self, rotulo):
+    def __init__(self, rotulo, heuristica=0):
         self.rotulo = rotulo
+        self.heuristica = heuristica
         self.visitado = False
         self.adjacentes = []
 
@@ -84,3 +85,13 @@ class Grafo:
     bucarest.adciona_adjacente(Adjacente(pitesti, 101))
     bucarest.adciona_adjacente(Adjacente(giurgiu, 90))
     bucarest.adciona_adjacente(Adjacente(fagaras, 211))
+
+    
+
+grafo = Grafo()
+
+print("Adjacentes de Arad:")
+grafo.arad.mostra_adjacentes()
+
+print("Adjacentes de Sibiu:")
+grafo.sibiu.mostra_adjacentes()
